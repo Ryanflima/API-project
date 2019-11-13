@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>IP CHECKER</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
     <h1>IP CHECKER</h1>
     <div class="container">
-        <form action="/" method="POST">
-            <input name="IP" class="ghost-input" type= "text" placeholder="Enter the IP you want to check">
-            <input class="ghost-button" type="submit" value="Check Now">
-        </form>
+      <form action="/" method="POST">
+        <input
+          name="IP"
+          class="ghost-input"
+          type="text"
+          placeholder="Enter the IP you want to check"
+        />
+        <input class="ghost-button" type="submit" value="Check Now" />
+      </form>
+      <div class="answer">
+        <% if(error) { %>
+        <p><%= error %></p>
+        <% } else { %>
+        <p><%= ip %></p>
+        <% } %>
+      </div>
     </div>
-</body>
+  </body>
 </html>
